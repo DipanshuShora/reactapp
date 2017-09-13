@@ -1,11 +1,19 @@
 import React from 'react';
 import './css/print.css';
+import {MyButton} from './MyButton.js';
+import {EventImage} from './EventImage.js';
+
 export class Print extends React.Component{
+    handleEvent(){
+        alert("Local Function");
+    }
     render (){
         return(
             <div>
                 <h1>Hello {this.props.greets}</h1>
-                <button>Click Me</button>
+                <button onClick={this.handleEvent}>Click Me</button>
+                <MyButton />
+                <EventImage />
             </div>
         );
     }

@@ -5,7 +5,7 @@ class ReactAppComponents extends React.Component{
     render(){
         return (
             <div>
-                <Print greets="Deepanshu Shora" />
+                <Print />
             </div>
         );
     }
