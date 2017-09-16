@@ -11,8 +11,9 @@ const simeon = {
 //         );
 //     }
 // }
-export const EventImage = () =>{
+const EventImage = () =>{
   return(
       <img src={simeon.imgsrc} alt={simeon.imgalt}/>
   );
 };
+export default EventImage;
