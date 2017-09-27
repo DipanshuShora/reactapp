@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 export const IntroList = (props) =>{
-    return(
+    return (
         <p>
-            Name : {props.list.name}<br />
-            Phone Number : {props.list.ph}<br />
-            Voting Eligibility : {props.list.adult>=18?'Eligible':'Not Eligible'}
+        Name : {props.list.name}<br/>
+        Phone Number : {props.list.ph}<br/>
+        Voting Eligibility : {props.list.adult >= 18 ? 'Eligible' : 'Not Eligible'}
         </p>
     );
 };
@@ -14,3 +14,4 @@ IntroList.propTypes = {
     ph:PropTypes.number,
     adult:PropTypes.number
 };
+IntroList.defaultProps = {name:'Dipanshu',ph:9868642377,adult:20};
