@@ -15,7 +15,7 @@ export class InputField extends React.Component{
         return(
             <div>
                 <input type="text" onChange={(e)=>this.setState({user_name:e.target.value})} placeholder="Enter Your Name" /><br/>
-                <input type="text" onChange={(e)=>this.setState({user_ph:e.target.value})} placeholder="Enter Your Name" /><br/>
+                <input type="text" onChange={(e)=>this.setState({user_ph:e.target.value})} placeholder="Enter Your Phone No." /><br/>
                 <input type="text" onChange={(e)=>this.setState({user_adult:e.target.value})} placeholder="Enter Your Age" />
                 <IntroList list={list} />
                 {this.props.children}
