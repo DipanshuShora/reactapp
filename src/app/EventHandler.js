@@ -13,13 +13,13 @@ export class AgeIncrement extends React.Component{
     }
     increment(){
         setInterval(()=>{
-            if(this.state.myage===250){
+            if(this.state.myage===40){
                 clearInterval(this.increment());
             }
             else{
                 this.setState({myage:this.state.myage+1});
             }
-        },1);
+        },1000);
     }
     render(){
         return(
