@@ -6,10 +6,7 @@ export class AgeIncrement extends React.Component{
         setTimeout(()=>{
             this.setState({status:1});
         },5000);
-        // setInterval(()=>{
-        //     this.setState({myage:this.state.myage+1});
-        // },1000);
-        this.increment();
+        this.increment = this.increment.bind(this);
     }
     increment(){
         setInterval(()=>{
@@ -28,6 +25,7 @@ export class AgeIncrement extends React.Component{
                 <h2>Status : {this.state.status}</h2>
                 <button onClick={()=>{this.setState({myage:this.state.myage+1})}}>Increment It</button>
                 <button onClick={()=>{this.setState({myage:this.state.myage-1})}}>Decrement It</button>
+                <button onClick={this.increment}>Start Age Counter</button>
             </div>
         );
     }
