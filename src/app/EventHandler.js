@@ -16,7 +16,7 @@ export class AgeIncrement extends React.Component{
             else{
                 this.setState({myage:this.state.myage+1});
             }
-        },1000);
+        },100);
     }
     render(){
         return(
