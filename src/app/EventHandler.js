@@ -3,10 +3,6 @@ export class AgeIncrement extends React.Component{
     constructor(props){
         super(props);
         this.state = {myage:props.myage,status:0};
-        setTimeout(()=>{
-            this.setState({status:1});
-        },5000);
-        this.increment = this.increment.bind(this);
     }
     increment(){
         setInterval(()=>{
@@ -17,6 +13,10 @@ export class AgeIncrement extends React.Component{
                 this.setState({myage:this.state.myage+1});
             }
         },100);
+        setTimeout(()=>{
+            this.setState({status:1});
+        },5000);
+        this.increment = this.increment.bind(this);
     }
     render(){
         return(
