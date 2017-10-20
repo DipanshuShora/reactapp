@@ -1,5 +1,8 @@
 import React from 'react';
 export class AgeIncrement extends React.Component{
+    mymessage(){
+        alert("mymessage");
+    }
     constructor(props){
         super(props);
         this.state = {myage:props.myage,status:0};
@@ -26,6 +29,7 @@ export class AgeIncrement extends React.Component{
                 <button onClick={()=>{this.setState({myage:this.state.myage+1})}}>Increment It</button>
                 <button onClick={()=>{this.setState({myage:this.state.myage-1})}}>Decrement It</button>
                 <button onClick={this.increment}>Start Age Counter</button>
+                <button onClick={this.props.greet}>Message</button>
             </div>
         );
     }
