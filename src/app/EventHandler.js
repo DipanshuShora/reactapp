@@ -1,4 +1,5 @@
 import React from 'react';
+import './css/print.css';
 export class AgeIncrement extends React.Component{
     mymessage(){
         alert("mymessage");
@@ -6,6 +7,7 @@ export class AgeIncrement extends React.Component{
     constructor(props){
         super(props);
         this.state = {myage:props.myage,status:0};
+        this.increment = this.increment.bind(this);
     }
     increment(){
         setInterval(()=>{
@@ -15,11 +17,10 @@ export class AgeIncrement extends React.Component{
             else{
                 this.setState({myage:this.state.myage+1});
             }
-        },100);
+        },1000);
         setTimeout(()=>{
             this.setState({status:1});
         },5000);
-        this.increment = this.increment.bind(this);
     }
     render(){
         return(
@@ -29,7 +30,7 @@ export class AgeIncrement extends React.Component{
                 <button onClick={()=>{this.setState({myage:this.state.myage+1})}}>Increment It</button>
                 <button onClick={()=>{this.setState({myage:this.state.myage-1})}}>Decrement It</button>
                 <button onClick={this.increment}>Start Age Counter</button>
-                <button onClick={this.props.greet}>Message</button>
+                <button className="btn" onClick={this.props.greet}>Message</button>
             </div>
         );
     }
